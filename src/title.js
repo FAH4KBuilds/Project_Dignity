@@ -1,7 +1,11 @@
+// import.meta.env.BASE_URL is Vite's configured `base` ('/' in dev, '/Project_Dignity/' on
+// GitHub Pages) — a hardcoded '/fonts/...' path 404s once the site is served from a subpath.
+const fontUrl = `${import.meta.env.BASE_URL}fonts/Chewy-Regular.ttf`;
+
 const STYLE = `
 @font-face {
   font-family: 'Chewy';
-  src: url('/fonts/Chewy-Regular.ttf') format('truetype');
+  src: url('${fontUrl}') format('truetype');
   font-display: swap;
 }
 .game-title {
